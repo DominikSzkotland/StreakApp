@@ -1,54 +1,33 @@
-# React + TypeScript + Vite
+# Streak App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This app provides both simple and complex features, enabling users to create and manage their goals using a streak system.
 
-Currently, two official plugins are available:
+## Goals
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Enabling people to create streak instances.
+* Providing notifications.
+* Free and open-source use.
+* Optional ads to help financially support website and app hosting.
 
-## Expanding the ESLint configuration
+## Streak Instance
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+A streak instance is a streak model where you can build a list of tasks using fancy and interactive blocks.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Blocks
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Currently, I am planning to add the following blocks:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+* **Text Block:**
+    * Just text with a "Next" button below.
+* **Clock Block:**
+    * Text with a built-in timer showing the remaining time. Skip and "Next" buttons.
+* **Count Block:**
+    * Text with a built-in counting screen where you can count using "+" and "-" buttons. Skip and "Next" buttons.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### Building
+
+Building, as I said, will be possible using blocks. Their design will be similar to those from the Scratch program: [https://scratch.mit.edu/](https://scratch.mit.edu/).
+
+## License
+
+This program is built with the MIT License by GitHub user Dominik Szkotland. Link to the full license [here](https://github.com/DominikSzkotland/StreakApp/blob/01a021291056cc2ba928ebec7e118dc2243846b0/LICENSE).
